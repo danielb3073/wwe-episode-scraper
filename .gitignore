@@ -1,0 +1,5 @@
+# ignore macOS file
+*.DS_Store
+
+# ignore any test .csv files
+*.csv

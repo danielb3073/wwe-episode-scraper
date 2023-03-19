@@ -77,12 +77,12 @@ def get_eps(url):
 	return eps
 
 if int(user_year) >= 1993 and int(user_year) <= 1998:
-	raw_season = get_eps("https://thetvdb.com/series/wwe-raw/seasons/official/" + str(raw_season_calc(user_year)))
+	raw_season = get_eps(f"https://thetvdb.com/series/wwe-raw/seasons/official/{str(raw_season_calc(user_year))}")
 	year = []
 	year.extend(raw_season)
 elif int(user_year) >= 1999 and int(user_year) <= 2023:
-	raw_season = get_eps("https://thetvdb.com/series/wwe-raw/seasons/official/" + str(raw_season_calc(user_year)))
-	smackdown_season = get_eps("https://thetvdb.com/series/wwe-smackdown/seasons/official/" + str(smackdown_season_calc(user_year)))
+	raw_season = get_eps(f"https://thetvdb.com/series/wwe-raw/seasons/official/{str(raw_season_calc(user_year))}")
+	smackdown_season = get_eps(f"https://thetvdb.com/series/wwe-smackdown/seasons/official/{str(smackdown_season_calc(user_year))}")
 	year = []
 	year.extend(raw_season)
 	year.extend(smackdown_season)
@@ -92,11 +92,10 @@ year.extend(ppv_season)
 
 year_sorted = sorted(year, key=lambda x: datetime.strptime(x[2], "%B %d %Y"))
 
-with open ('WWE_Episodes_Ordered_' + str(user_year) + '.csv', 'w', encoding='UTF-8', newline='') as f:
+with open (f'WWE_Episodes_Ordered_{str(user_year)}.csv', 'w', encoding='UTF-8', newline='') as f:
 	writer = csv.writer(f)
 
 	writer.writerow(["Episode", "Name", "Date"])
 
 	for episode in year_sorted:
-		#print(episode, "\r")
 		writer.writerow(episode)
