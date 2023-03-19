@@ -1,7 +1,8 @@
 # wwe-episode-scraper
 A python script that scrapes a list of RAW, SmackDown, and PPV episodes for any given year.
 
-To use the script, you'll need to have Python and pip installed.
+To use the script, you'll need to have Python3 and pip installed.
+I'm using `Python 3.8.2` and `pip 23.0.1`
 
 1. Open a command prompt/terminal and navigate to the folder with the script and requirements.txt
 2. Run the command `pip install -r requirements.txt`
