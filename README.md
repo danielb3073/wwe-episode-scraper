@@ -10,6 +10,9 @@ I'm using `Python 3.8.2` and `pip 23.0.1`
 
 The script will grab all RAW, SmackDown and PPVs for that year, sort them into a list by aired date, and spit it out into a `.csv` file.
 
+Example of the output:
+![image](https://user-images.githubusercontent.com/58257152/226156907-1caec782-bfaa-4469-b460-2876889adc46.png)
+
 Sources: 
 - RAW episodes - https://thetvdb.com/series/wwe-raw
 - SmackDown episodes - https://thetvdb.com/series/wwe-smackdown
